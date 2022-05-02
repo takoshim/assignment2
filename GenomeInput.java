@@ -1,17 +1,39 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GenomeInput {
-    Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
-    public HumanGenome input() {
-        System.out.print("Please input genome name.\r");
+    public static HumanGenome input() {
+        // Prompts user to enter genome name
+        System.out.println("Please input genome name.");
         String genomeName = scanner.nextLine();
-        System.out.print("Please input number of genes.\r");
+
+        // Prompts user to enter number of genes
+        System.out.println("Please input number of genes.");
         int numGenes = scanner.nextInt();
-        System.out.print("Please input number of chromosomes.\r");
+        scanner.nextLine();
+
+        // Prompts user to enter number of chromosomes
+        System.out.println("Please input number of chromosomes.");
         int numChromosomes = scanner.nextInt();
-        System.out.print("Please input number of cells.\r");
+        scanner.nextLine();
+
+        // Prompts user to enter number of cells.
+        System.out.println("Please input number of cells.");
         int numCells = scanner.nextInt();
+        scanner.nextLine();
+
+        // returns HumanGenome object
         return new HumanGenome(genomeName, numGenes, numChromosomes, numCells);
+    }
+
+    public static void main(String[] args) {
+        ArrayList<HumanGenome> genomes = new ArrayList<>();
+
+        for (int i=0; i<3; i++) {
+            genomes.add(GenomeInput.input());
+            genomes.get(i).print();
+        }
     }
 }

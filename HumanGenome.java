@@ -45,15 +45,11 @@ public class HumanGenome {
     }
 
     public void print() {
-        System.out.printf("Genome Name:\t\t\t\t\t%s\n", genomeName);
-        System.out.printf("Number of Genes in Genome:\t\t%d\n", numGenes);
-        System.out.printf("Number of Chromosomes:\t\t\t%d\n", numChromosomes);
-        System.out.printf("Number of Cells in Body:\t\t%d", numCells);
-
-        String genomeName;
-        Integer numGenes;
-        Integer numChromosomes;
-        Integer numCells;
+        System.out.printf("%30s %20s\n","Genome Name:", genomeName);
+        System.out.printf("%30s %,20d\n","Number of Genes in Genome:", numGenes);
+        System.out.printf("%30s %,20d\n","Number of Chromosomes:", numChromosomes);
+        System.out.printf("%30s %,20d\n","Number of Cells in Body:", numCells);
+        System.out.println("\n");
     }
 
 
