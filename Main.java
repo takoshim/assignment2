@@ -6,8 +6,11 @@ public class Main {
         HumanGenome goofy = new HumanGenome("Goofy", 8000, 8000, 800000);
 
         micky.print();
+        System.out.println("\n");
         minnie.print();
+        System.out.println("\n");
         goofy.print();
+        System.out.println("\n");
     }
 
 
